@@ -12,7 +12,6 @@ module Arel
     #   # CASE WHEN "table"."x" > 1 THEN "table"."y" ELSE "table"."z" END
     #   switch.when(table[:x].gt(1)).then(table[:y]).else(table[:z])
     class Case < ::Arel::Nodes::Node
-      include Arel::Expression
       include Arel::Expressions
       include Arel::Predications
       include Arel::AliasPredication
